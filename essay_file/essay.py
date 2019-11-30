@@ -37,7 +37,12 @@ def Char_upper():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     read_upper = infile.read()
     infile.close()
-    char_up = read_upper.isupper()
-    print(len(char_up))
+    result = 0
+    for i in read_upper:
+        if i == read_upper.isupper():
+            result = result + 1
+        else :
+            pass
+    print(result)
 main()
             
