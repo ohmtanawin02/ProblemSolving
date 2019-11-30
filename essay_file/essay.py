@@ -1,7 +1,7 @@
 def main():
     Read_line()
 def Read_line():
-    infile = open("Loop.txt",'r')
+    infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readline = infile.read()
     infile.close()
     result = 0
@@ -11,4 +11,5 @@ def Read_line():
         else:
             pass
     print(result)
+main()
             
