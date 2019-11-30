@@ -5,6 +5,7 @@ def main():
     Read_character()
     Char_upper()
     Char_lower()
+    Special_char()
 def Read_line():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readline = infile.read()
@@ -27,6 +28,25 @@ def Read_character():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readcharacter = infile.read()
     infile.close()
+    result1 = 0
+    result = 0
+    for i in readcharacter.replace(' ',''):
+        result = result + 1
+    for o in readcharacter:
+        if o == "," :
+            result1 = result1 + 1
+        if o == "." :
+            result1 = result1 + 1
+        if o == ")" :
+            result1 = result1 + 1
+        if o == "(" :
+            result1 = result1 + 1
+        if o == "/" :
+            result1 = result1 + 1
+        if o == ";" :
+            result1 = result1 + 1
+    result3 = result - result1
+    print(result3)
 def Char_upper():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     read_upper = infile.read()
@@ -48,6 +68,25 @@ def Char_lower():
             result = result +1
         else :
             pass
+    print(result)
+def Special_char():
+    infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
+    Spe_char = infile.read()
+    infile.close()
+    result = 0
+    for i in Spe_char:
+        if i == "," :
+            result = result + 1
+        if i == "." :
+            result = result + 1
+        if i == ")" :
+            result = result + 1
+        if i == "(" :
+            result = result + 1
+        if i == "/" :
+            result = result + 1
+        if i == ";" :
+            result = result + 1
     print(result)
 main()
             
