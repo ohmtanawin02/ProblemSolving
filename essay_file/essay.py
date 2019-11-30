@@ -1,5 +1,6 @@
 def main():
     Read_line()
+    Read_Sentense()
 def Read_line():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readline = infile.read()
@@ -11,5 +12,11 @@ def Read_line():
         else:
             pass
     print(result)
+def Read_Sentense():
+    infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
+    readsentense = infile.read()
+    infile.close()
+    read_splitdot = readsentense.split(".")
+    print(read_splitdot)
 main()
             
