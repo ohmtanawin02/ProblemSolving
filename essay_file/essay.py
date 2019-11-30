@@ -4,16 +4,12 @@ def main():
     Read_Word()
     Read_character()
     Char_upper()
+    Char_lower()
 def Read_line():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readline = infile.read()
     infile.close()
-    result = 0
-    for i in readline:
-        if i == "\n":
-            result = result + 1
-        else:
-            pass
+    result = len(readline.splitlines())
     print(result)
 def Read_Sentense():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
@@ -31,8 +27,6 @@ def Read_character():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     readcharacter = infile.read()
     infile.close()
-    read_charlen = len(readcharacter)
-    print(read_charlen)
 def Char_upper():
     infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
     read_upper = infile.read()
@@ -41,6 +35,17 @@ def Char_upper():
     for i in read_upper:
         if i.isupper() == True:
             result = result + 1
+        else :
+            pass
+    print(result)
+def Char_lower():
+    infile = open("/Users/again/Desktop/GIT/ProblemSolving/essay_file/Loop.txt",'r')
+    read_lower = infile.read()
+    infile.close()
+    result = 0
+    for i in read_lower:
+        if i.islower() == True:
+            result = result +1
         else :
             pass
     print(result)
