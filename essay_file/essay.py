@@ -39,7 +39,7 @@ def Char_upper():
     infile.close()
     result = 0
     for i in read_upper:
-        if i == read_upper.isupper():
+        if i.isupper() == True:
             result = result + 1
         else :
             pass
