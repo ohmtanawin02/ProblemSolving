@@ -1,4 +1,5 @@
 def reverse_recursion(s):
+    print(s)
     if len(s) == 0:
         return s
     else:
