@@ -14,3 +14,16 @@ print(stack.pop())
 
 print('\nStack after elements are poped: ')
 print(stack)
+print('----------------------------------------')
+ohm = []
+ohm.append('Tanawin')
+ohm.append('Jenkunnaphat')
+
+print('Stack ohm')
+print(ohm)
+print('\nElements poped from stack: ')
+print(ohm.pop())
+print(ohm.pop())
+
+print('Stack after poped : ')
+print(ohm)
