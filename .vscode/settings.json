@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "C:\\Program Files\\Python37\\python.exe",
+    "python.pythonPath": "/Library/Frameworks/Python.framework/Versions/3.7/bin/python3",
     "editor.formatOnSave": true,
     "editor.rulers": [
         80,
