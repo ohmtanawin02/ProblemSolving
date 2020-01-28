@@ -65,6 +65,17 @@ class Node:
             res = res + self.inorderTraversal(root.right)
         return res
 
+    def DeleteBinary(self, root):
+        if self.root is None:
+            if root < self.root:
+                if self.left is None:
+                    self.left = DeleteBinary(self.left, root)
+            elif root > self.root:
+                if self.right is None:
+                    self.right = DeleteBinary(self.left, root)
+        else:
+            self.root = data
+
 
 root = Node(60)
 root.insert(65)
@@ -77,4 +88,14 @@ root.insert(51)
 root.insert(73)
 root.findval(65)
 
-root.PrintTree()
+print(root.inorderTraversal(root))
+print(root.PreorderTraversal(root))
+print(root.PostorderTraversal(root))
+print(root.DeleteBinary(51))
+
+# if root < self.data:
+#self.left = DeleteBinary(self.left, root)
+# elif root > self.data:
+#self.right = DeleteBinary(self.right, root)
+# else:
+#print('dont delete')
