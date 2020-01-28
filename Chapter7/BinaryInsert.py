@@ -29,17 +29,41 @@ class Node:
         if self.right:
             self.right.PrintTree()
 
-    def findval(self, lkpval):
-        if lkpval < self.data:
+    def findval(self, data):
+        if data < self.data:
             if self.left is None:
-                return str(lkpval)+" Not Found"
-            return self.left.findval(lkpval)
-        elif lkpval > self.data:
+                return str(data)+" Not Found"
+            return self.left.findval(data)
+        elif data > self.data:
             if self.right is None:
-                return str(lkpval)+" Not Found"
-            return self.right.findval(lkpval)
+                return str(data)+" Not Found"
+            return self.right.findval(data)
         else:
             print(str(self.data) + " is found")
+
+    def PostorderTraversal(self, root):
+        res = []
+        if root:
+            res = self.PostorderTraversal(root.left)
+            res = res + self.PostorderTraversal(root.right)
+            res.append(root.data)
+        return res
+
+    def PreorderTraversal(self, root):
+        res = []
+        if root:
+            res.append(root.data)
+            res = res + self.PreorderTraversal(root.left)
+            res = res + self.PreorderTraversal(root.right)
+        return res
+
+    def inorderTraversal(self, root):
+        res = []
+        if root:
+            res = self.inorderTraversal(root.left)
+            res.append(root.data)
+            res = res + self.inorderTraversal(root.right)
+        return res
 
 
 root = Node(60)
@@ -51,5 +75,6 @@ root.insert(50)
 root.insert(81)
 root.insert(51)
 root.insert(73)
+root.findval(65)
 
 root.PrintTree()
