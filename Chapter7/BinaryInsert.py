@@ -30,9 +30,14 @@ class Node:
             self.right.PrintTree()
 
 
-root = Node(12)
-root.insert(6)
-root.insert(14)
-root.insert(3)
+root = Node(60)
+root.insert(65)
+root.insert(75)
+root.insert(32)
+root.insert(47)
+root.insert(50)
+root.insert(81)
+root.insert(51)
+root.insert(73)
 
 root.PrintTree()
