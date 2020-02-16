@@ -18,7 +18,9 @@ for i in G.neighbors(add):
         if n == add:
             del n
         else:
-            print(n)
+            result.append(n)
+result = list(set(result))
+print(result)
 
 
 nx.draw(G, with_labels=True, font_color='yellow', node_size=1500)
